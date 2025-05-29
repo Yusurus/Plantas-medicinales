@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Reconocimiento Facial</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <h1>🔐 SecureAccess</h1>
+            <p>Sistema de Autenticación Avanzado</p>
+        </div>
+
+        <div id="statusMessage" class="status-message"></div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" required placeholder="Ingresa tu usuario">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña">
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                <span id="loginSpinner" class="loading" style="display: none;"></span>
+                Iniciar Sesión
+            </button>
+        </form>
+
+        <div class="divider">
+            <span>O accede con</span>
+        </div>
+
+        <button id="faceLoginBtn" class="btn btn-face">
+            <svg class="face-icon" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM8 8c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm4 10c-2.21 0-4-1.79-4-4h8c0 2.21-1.79 4-4 4zm4-6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+            </svg>
+            Reconocimiento Facial
+        </button>
+
+        <div id="cameraContainer" class="camera-container">
+            <video id="video" autoplay></video>
+            <div class="camera-controls">
+                <button id="captureBtn" class="btn btn-primary">
+                    <span id="captureSpinner" class="loading" style="display: none;"></span>
+                    Capturar y Verificar
+                </button>
+                <button id="cancelBtn" class="btn btn-secondary">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Tecnología de reconocimiento facial con DeepFace</p>
+        </div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
