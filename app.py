@@ -16,11 +16,18 @@ CORS(app)
 
 
 # --- Configuration for Plant App ---
-def get_connection():
+"""def get_connection():
     return mysql.connector.connect(
         host='bdyuri.cpikeig8qwsl.us-east-1.rds.amazonaws.com',
         user='admin',
         password='23072208aaA',
+        database='bdplantas'
+    )"""
+def get_connection():
+    return mysql.connector.connect(
+        host='localhost',
+        user='root',
+        password='12admin34',
         database='bdplantas'
     )
 
